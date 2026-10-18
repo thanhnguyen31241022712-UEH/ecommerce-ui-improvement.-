@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-18",
+  "browser": "Chrome",
+  "viewports": [
+    {
+      "brokenImages": 0,
+      "buttonHeights": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "columns": "341.333px 341.333px",
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "brokenImages": 0,
+      "buttonHeights": [
+        46,
+        46,
+        46,
+        46
+      ],
+      "columns": "338.667px",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": 0,
+      "buttonHeights": [
+        46,
+        46,
+        46,
+        46
+      ],
+      "columns": "268.667px",
+      "scroll": 305,
+      "width": 320
+    }
+  ],
+  "keyboard": {
+    "openedAll": true,
+    "closedCount": 4
+  }
+}
