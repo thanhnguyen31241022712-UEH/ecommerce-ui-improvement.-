@@ -1,0 +1,14 @@
+{
+  "actor": "Trợ lý AI",
+  "checks": [
+    "4 article",
+    "ID không trùng",
+    "đích liên kết tồn tại",
+    "tài nguyên cục bộ tồn tại",
+    "img có alt",
+    "không script trong HTML",
+    "ngoặc CSS cân bằng",
+    "giá minh họa khớp phần trăm"
+  ],
+  "pass": true
+}

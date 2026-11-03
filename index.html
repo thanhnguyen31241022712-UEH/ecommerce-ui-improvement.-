@@ -51,48 +51,179 @@
         <p>4 gợi ý cho một khởi đầu mới</p>
       </div>
       <div class="product-grid">
+        <!-- Sách 1: một đơn vị nội dung độc lập -->
         <article class="product-card" aria-labelledby="book-1-title">
-          <div class="product-image sage"><span class="discount">Giảm 20%</span><img src="images/book-01.svg" alt="Bìa sách mẫu Bắt đầu từ một trang, màu xanh lá với hình chiếc lá" width="280" height="350"></div>
+          <div class="product-image sage">
+            <span class="discount">Giảm 20%</span>
+            <img
+              src="images/book-01.svg"
+              alt="Bìa sách mẫu Bắt đầu từ một trang, màu xanh lá với hình chiếc lá"
+              width="280"
+              height="350">
+          </div>
+
           <div class="product-body">
             <p class="category">KỸ NĂNG SỐNG</p>
             <h3 id="book-1-title">Bắt đầu từ một trang</h3>
             <p class="book-description">Nuôi dưỡng những thói quen nhỏ mỗi ngày.</p>
-            <div class="price-block"><p class="sale-price"><span class="sr-only">Giá bán </span>96.000 <span>₫</span></p><p class="original-price"><span class="sr-only">Giá gốc </span><del>120.000 ₫</del></p></div>
+
+            <!-- Flexbox căn giá bán và giá gốc theo đường cơ sở chữ -->
+            <div class="price-block">
+              <p class="sale-price">
+                <span class="sr-only">Giá bán </span>96.000 <span>₫</span>
+              </p>
+              <p class="original-price">
+                <span class="sr-only">Giá gốc </span><del>120.000 ₫</del>
+              </p>
+            </div>
             <p class="saving">Tiết kiệm 24.000 ₫</p>
-            <details class="book-details"><summary aria-label="Xem thông tin sách Bắt đầu từ một trang">Xem thông tin <span aria-hidden="true">+</span></summary><div class="details-content"><p><strong>Nội dung:</strong> Gợi ý chia mục tiêu thành những bước nhỏ và xây dựng thời gian đọc sách.</p><p><strong>Quy cách mẫu:</strong> Bìa mềm · 160 trang.</p><p>Sách và giá được tạo để minh họa giao diện.</p></div></details>
+
+            <details class="book-details">
+              <summary aria-label="Xem thông tin sách Bắt đầu từ một trang">
+                Xem thông tin <span aria-hidden="true">+</span>
+              </summary>
+              <div class="details-content">
+                <p><strong>Nội dung:</strong> Gợi ý chia mục tiêu thành những bước nhỏ và xây dựng thời gian đọc sách.</p>
+                <p><strong>Quy cách mẫu:</strong></p>
+                <ul class="book-specs">
+                  <li>Hình thức: Bìa mềm.</li>
+                  <li>Số trang: 160 trang.</li>
+                </ul>
+                <p>Sách và giá được tạo để minh họa giao diện.</p>
+              </div>
+            </details>
           </div>
         </article>
+
+        <!-- Sách 2: một đơn vị nội dung độc lập -->
         <article class="product-card" aria-labelledby="book-2-title">
-          <div class="product-image peach"><span class="discount">Giảm 30%</span><img src="images/book-02.svg" alt="Bìa sách mẫu Tư duy giữa thế giới số, màu cam với các khối hình học" width="280" height="350"></div>
+          <div class="product-image peach">
+            <span class="discount">Giảm 30%</span>
+            <img
+              src="images/book-02.svg"
+              alt="Bìa sách mẫu Tư duy giữa thế giới số, màu cam với các khối hình học"
+              width="280"
+              height="350">
+          </div>
+
           <div class="product-body">
             <p class="category">CÔNG NGHỆ VÀ TƯ DUY</p>
             <h3 id="book-2-title">Tư duy giữa thế giới số</h3>
             <p class="book-description">Đặt câu hỏi tốt hơn, học điều mới sâu hơn.</p>
-            <div class="price-block"><p class="sale-price"><span class="sr-only">Giá bán </span>126.000 <span>₫</span></p><p class="original-price"><span class="sr-only">Giá gốc </span><del>180.000 ₫</del></p></div>
+
+            <!-- Flexbox căn giá bán và giá gốc theo đường cơ sở chữ -->
+            <div class="price-block">
+              <p class="sale-price">
+                <span class="sr-only">Giá bán </span>126.000 <span>₫</span>
+              </p>
+              <p class="original-price">
+                <span class="sr-only">Giá gốc </span><del>180.000 ₫</del>
+              </p>
+            </div>
             <p class="saving">Tiết kiệm 54.000 ₫</p>
-            <details class="book-details"><summary aria-label="Xem thông tin sách Tư duy giữa thế giới số">Xem thông tin <span aria-hidden="true">+</span></summary><div class="details-content"><p><strong>Nội dung:</strong> Làm quen với tư duy phản biện, kiểm chứng thông tin và học tập trong môi trường số.</p><p><strong>Quy cách mẫu:</strong> Bìa mềm · 224 trang.</p><p>Sách và giá được tạo để minh họa giao diện.</p></div></details>
+
+            <details class="book-details">
+              <summary aria-label="Xem thông tin sách Tư duy giữa thế giới số">
+                Xem thông tin <span aria-hidden="true">+</span>
+              </summary>
+              <div class="details-content">
+                <p><strong>Nội dung:</strong> Làm quen với tư duy phản biện, kiểm chứng thông tin và học tập trong môi trường số.</p>
+                <p><strong>Quy cách mẫu:</strong></p>
+                <ul class="book-specs">
+                  <li>Hình thức: Bìa mềm.</li>
+                  <li>Số trang: 224 trang.</li>
+                </ul>
+                <p>Sách và giá được tạo để minh họa giao diện.</p>
+              </div>
+            </details>
           </div>
         </article>
+
+        <!-- Sách 3: một đơn vị nội dung độc lập -->
         <article class="product-card" aria-labelledby="book-3-title">
-          <div class="product-image lavender"><span class="discount">Giảm 20%</span><img src="images/book-03.svg" alt="Bìa sách mẫu Đi chậm để thấy xa, màu tím với mặt trời và những ngọn đồi" width="280" height="350"></div>
+          <div class="product-image lavender">
+            <span class="discount">Giảm 20%</span>
+            <img
+              src="images/book-03.svg"
+              alt="Bìa sách mẫu Đi chậm để thấy xa, màu tím với mặt trời và những ngọn đồi"
+              width="280"
+              height="350">
+          </div>
+
           <div class="product-body">
             <p class="category">PHONG CÁCH SỐNG</p>
             <h3 id="book-3-title">Đi chậm để thấy xa</h3>
             <p class="book-description">Tìm khoảng bình yên giữa ngày bận rộn.</p>
-            <div class="price-block"><p class="sale-price"><span class="sr-only">Giá bán </span>108.000 <span>₫</span></p><p class="original-price"><span class="sr-only">Giá gốc </span><del>135.000 ₫</del></p></div>
+
+            <!-- Flexbox căn giá bán và giá gốc theo đường cơ sở chữ -->
+            <div class="price-block">
+              <p class="sale-price">
+                <span class="sr-only">Giá bán </span>108.000 <span>₫</span>
+              </p>
+              <p class="original-price">
+                <span class="sr-only">Giá gốc </span><del>135.000 ₫</del>
+              </p>
+            </div>
             <p class="saving">Tiết kiệm 27.000 ₫</p>
-            <details class="book-details"><summary aria-label="Xem thông tin sách Đi chậm để thấy xa">Xem thông tin <span aria-hidden="true">+</span></summary><div class="details-content"><p><strong>Nội dung:</strong> Những bài đọc ngắn về nghỉ ngơi, quan sát và giữ nhịp sinh hoạt cân bằng.</p><p><strong>Quy cách mẫu:</strong> Bìa mềm · 192 trang.</p><p>Sách và giá được tạo để minh họa giao diện.</p></div></details>
+
+            <details class="book-details">
+              <summary aria-label="Xem thông tin sách Đi chậm để thấy xa">
+                Xem thông tin <span aria-hidden="true">+</span>
+              </summary>
+              <div class="details-content">
+                <p><strong>Nội dung:</strong> Những bài đọc ngắn về nghỉ ngơi, quan sát và giữ nhịp sinh hoạt cân bằng.</p>
+                <p><strong>Quy cách mẫu:</strong></p>
+                <ul class="book-specs">
+                  <li>Hình thức: Bìa mềm.</li>
+                  <li>Số trang: 192 trang.</li>
+                </ul>
+                <p>Sách và giá được tạo để minh họa giao diện.</p>
+              </div>
+            </details>
           </div>
         </article>
+
+        <!-- Sách 4: một đơn vị nội dung độc lập -->
         <article class="product-card" aria-labelledby="book-4-title">
-          <div class="product-image sand"><span class="discount">Giảm 10%</span><img src="images/book-04.svg" alt="Bìa sách mẫu Chạm vào thiên nhiên, màu vàng với những chiếc lá và côn trùng" width="280" height="350"></div>
+          <div class="product-image sand">
+            <span class="discount">Giảm 10%</span>
+            <img
+              src="images/book-04.svg"
+              alt="Bìa sách mẫu Chạm vào thiên nhiên, màu vàng với những chiếc lá và côn trùng"
+              width="280"
+              height="350">
+          </div>
+
           <div class="product-body">
             <p class="category">KHÁM PHÁ VÀ THIẾU NHI</p>
             <h3 id="book-4-title">Chạm vào thiên nhiên</h3>
             <p class="book-description">Những điều kỳ diệu ngay trong khu vườn.</p>
-            <div class="price-block"><p class="sale-price"><span class="sr-only">Giá bán </span>153.000 <span>₫</span></p><p class="original-price"><span class="sr-only">Giá gốc </span><del>170.000 ₫</del></p></div>
+
+            <!-- Flexbox căn giá bán và giá gốc theo đường cơ sở chữ -->
+            <div class="price-block">
+              <p class="sale-price">
+                <span class="sr-only">Giá bán </span>153.000 <span>₫</span>
+              </p>
+              <p class="original-price">
+                <span class="sr-only">Giá gốc </span><del>170.000 ₫</del>
+              </p>
+            </div>
             <p class="saving">Tiết kiệm 17.000 ₫</p>
-            <details class="book-details"><summary aria-label="Xem thông tin sách Chạm vào thiên nhiên">Xem thông tin <span aria-hidden="true">+</span></summary><div class="details-content"><p><strong>Nội dung:</strong> Khám phá cây xanh và những sinh vật quen thuộc qua các hoạt động quan sát.</p><p><strong>Quy cách mẫu:</strong> Bìa cứng · 96 trang.</p><p>Sách và giá được tạo để minh họa giao diện.</p></div></details>
+
+            <details class="book-details">
+              <summary aria-label="Xem thông tin sách Chạm vào thiên nhiên">
+                Xem thông tin <span aria-hidden="true">+</span>
+              </summary>
+              <div class="details-content">
+                <p><strong>Nội dung:</strong> Khám phá cây xanh và những sinh vật quen thuộc qua các hoạt động quan sát.</p>
+                <p><strong>Quy cách mẫu:</strong></p>
+                <ul class="book-specs">
+                  <li>Hình thức: Bìa cứng.</li>
+                  <li>Số trang: 96 trang.</li>
+                </ul>
+                <p>Sách và giá được tạo để minh họa giao diện.</p>
+              </div>
+            </details>
           </div>
         </article>
       </div>
@@ -106,7 +237,7 @@
   </main>
   <footer class="site-footer wrap" id="ve-chung-toi">
     <div><p class="footer-brand">góc đọc.</p><p>Một góc nhỏ cho những trang sách mới.</p></div>
-    <p>Bản mẫu giao diện nhà sách<br>Bài tập cá nhân Chương 1 · HTML5 &amp; CSS3</p>
+    <p>Bản mẫu giao diện nhà sách<br>Bài tập cá nhân Buổi 1 &amp; 2 · HTML5 &amp; CSS3</p>
     <a href="#">Về đầu trang <span aria-hidden="true">↑</span></a>
   </footer>
 </body>

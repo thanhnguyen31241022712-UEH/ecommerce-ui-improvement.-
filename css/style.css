@@ -67,11 +67,11 @@ h2 { font-size: clamp(25px, 2.5vw, 33px); line-height: 1.3; letter-spacing: -.02
 .lavender { background: #eae6ee; }
 .sand { background: #f3edda; }
 .discount { position: absolute; z-index: 1; top: 12px; left: 12px; padding: 4px 9px; border-radius: 4px; background: #fffdf7; color: #853b21; font-size: 11px; font-weight: 700; }
-.product-body { padding: 20px 18px 18px; }
+.product-body { padding: 22px; }
 .category { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .08em; margin-bottom: 7px; }
-h3 { font-size: 18px; line-height: 1.35; letter-spacing: -.02em; min-height: 49px; margin-bottom: 8px; overflow-wrap: anywhere; }
+.product-card h3 { font-size: 18px; line-height: 1.35; letter-spacing: -.02em; min-height: 49px; margin-bottom: 8px; overflow-wrap: anywhere; }
 .book-description { min-height: 42px; font-size: 12px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
-.price-block { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 10px; }
+.price-block { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: baseline; gap: 6px 12px; }
 .price-block p { margin-bottom: 0; white-space: nowrap; }
 .sale-price { font-size: 24px; font-weight: 750; color: var(--orange); line-height: 1.3; }
 .sale-price > span:not(.sr-only) { font-size: 17px; }
@@ -104,7 +104,7 @@ h3 { font-size: 18px; line-height: 1.35; letter-spacing: -.02em; min-height: 49p
   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .product-image { aspect-ratio: 1.5; }
   .product-image img { width: 150px; }
-  h3 { min-height: 0; }
+  .product-card h3 { min-height: 0; }
   .book-description { min-height: 0; }
 }
 @media (max-width: 700px) {
@@ -137,14 +137,60 @@ h3 { font-size: 18px; line-height: 1.35; letter-spacing: -.02em; min-height: 49p
   .product-grid { grid-template-columns: 1fr; }
   .product-image { aspect-ratio: 1.5; padding: 30px; }
   .product-image img { width: 140px; }
-  .product-body { padding: 20px; }
-  h3 { font-size: 20px; }
+  .product-body { padding: 22px; }
+  .product-card h3 { font-size: 20px; }
   .book-description, .book-details summary { font-size: 14px; }
   .category, .saving, .original-price { font-size: 12px; }
   .book-details summary { min-height: 46px; }
   .details-content { font-size: 14px; }
   .art-note { right: 3px; padding: 11px 14px; font-size: 13px; }
 }
+/* 6. Buổi 2: selector, Box Model và trạng thái tương tác */
+/* Element selector: quy tắc body, img ở đầu tệp.
+   Class selector: .product-body; descendant selector: .book-specs li. */
+.book-specs {
+  margin: 8px 0 12px;
+  padding-inline-start: 20px;
+}
+
+.book-specs li {
+  line-height: 1.6;
+}
+
+.book-specs li + li {
+  margin-top: 4px;
+}
+
+/* Padding nằm trong viền; margin nằm ngoài viền.
+   Border và border-radius của .product-card được giữ từ Buổi 1. */
+.details-content {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.details-content p:last-child {
+  font-size: 12px;
+}
+
+.book-details summary {
+  transition: background-color .2s ease, border-color .2s ease;
+}
+
+.book-details summary:hover {
+  border-color: var(--green);
+}
+
+.book-details summary:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .details-content p:last-child {
+    font-size: 13px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }

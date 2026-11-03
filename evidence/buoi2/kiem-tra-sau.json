@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-02",
+  "actor": "Trợ lý AI; không phải kết quả tự kiểm tra của sinh viên",
+  "viewportChecks": [
+    {
+      "cards": 4,
+      "columns": "338.667px",
+      "flex": "flex",
+      "images": true,
+      "lists": 4,
+      "note": "13px",
+      "overflow": false,
+      "padding": "22px",
+      "width": 390
+    },
+    {
+      "columns": "283.5px 283.5px 283.5px 283.5px",
+      "images": true,
+      "note": "12px",
+      "overflow": false,
+      "width": 1366
+    },
+    {
+      "columns": "341.333px 341.333px",
+      "images": true,
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "columns": "268.667px",
+      "images": true,
+      "note": "13px",
+      "overflow": false,
+      "width": 320
+    }
+  ],
+  "keyboard": [
+    {
+      "book": "Bắt đầu từ một trang",
+      "before": null,
+      "middle": "",
+      "after": null,
+      "pass": true
+    },
+    {
+      "book": "Tư duy giữa thế giới số",
+      "before": null,
+      "middle": "",
+      "after": null,
+      "pass": true
+    },
+    {
+      "book": "Đi chậm để thấy xa",
+      "before": null,
+      "middle": "",
+      "after": null,
+      "pass": true
+    },
+    {
+      "book": "Chạm vào thiên nhiên",
+      "before": null,
+      "middle": "",
+      "after": null,
+      "pass": true
+    }
+  ],
+  "focus": {
+    "label": "Xem thông tin sách Tư duy giữa thế giới số",
+    "outline": "rgb(171, 67, 30) solid 2.66667px",
+    "tag": "SUMMARY",
+    "visible": true
+  },
+  "links": [
+    {
+      "expected": "tu-sach",
+      "hash": "#tu-sach",
+      "pass": true
+    },
+    {
+      "expected": "cach-chon",
+      "hash": "#cach-chon",
+      "pass": true
+    },
+    {
+      "expected": "ve-chung-toi",
+      "hash": "#ve-chung-toi",
+      "pass": true
+    }
+  ]
+}

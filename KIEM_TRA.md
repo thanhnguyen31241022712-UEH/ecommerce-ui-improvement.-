@@ -1,48 +1,44 @@
-# Kiểm tra và điều chỉnh
+# Báo cáo kiểm thử Buổi 2
 
-## 1. Kiểm tra do trợ lý thực hiện
+Ngày: 02/11/2026. Người thực hiện các kiểm tra dưới đây: **trợ lý AI**, trên bản sao được chuẩn bị cho sinh viên. Nhật ký Buổi 1 nằm ở `docs/buoi1/KIEM_TRA.md`.
 
-Ngày 18/10/2026, Chrome trên máy tính. Các kích thước là chiều rộng viewport, không phải kiểm tra trên điện thoại vật lý.
+## 1. Kết quả đã kiểm tra
 
-| Kiểm tra | Kết quả |
-| --- | --- |
-| 1440 px | 4 cột sản phẩm |
-| 768 px | 2 cột sản phẩm |
-| 390 px | 1 cột sản phẩm |
-| 320 px | 1 cột sản phẩm |
-| Ảnh sản phẩm và ảnh giới thiệu | Tải được ở các kích thước đã thử |
-| Tràn ngang toàn trang | Không phát hiện ở các kích thước đã thử |
-| Mở/đóng thông tin bằng Enter | Thử đủ 4 sản phẩm, mở và đóng được |
-| Nút thông tin | Cao 44 px ở kích thước vừa; 46 px ở điện thoại nhỏ |
-| Liên kết Tủ sách | Điều hướng tới khu vực sản phẩm |
+| Nội dung | Kết quả | Bằng chứng / giới hạn |
+|---|---|---|
+| HTML mở được | Đạt trong Chrome cục bộ | Trang tải, đúng tên Góc Đọc và đủ 4 thẻ |
+| CSS được áp dụng | Đạt | Computed style: Grid, Flexbox và padding 22 px |
+| Ảnh hiển thị | Đạt ở 4 kích thước | Các img có complete và naturalWidth > 0 |
+| Giá minh họa | Kiểm tra theo dữ liệu tĩnh | 120000→96000;180000→126000;135000→108000;170000→153000; khoản giảm khớp |
+| Bố cục 1366 px | Đạt | 4 cột, không tràn ngang |
+| Bố cục 768 px | Đạt | 2 cột, không tràn ngang |
+| Bố cục 390 px | Đạt | 1 cột, không tràn ngang; ghi chú 13 px |
+| Bố cục 320 px | Đạt | 1 cột, không tràn ngang; ảnh tải được |
+| 4 nút thông tin bằng Enter | Đạt | Mỗi nút được nhấn hai lần, trạng thái thay đổi rồi trở về |
+| Tab và focus-visible | Đạt tại nút đã thử | Phần tử SUMMARY nhận focus, matches(:focus-visible), có viền màu |
+| Hover và transition | Cần sinh viên xác nhận bằng chuột | Có quy tắc CSS, đã quan sát :hover ngắn hạn; chưa đo trọn chuyển tiếp |
+| Liên kết nội trang | Đạt ở bản cục bộ | Đã bấm ba menu, URL hash khớp ID đích; cần thử lại khi lên Pages |
+| Sinh viên tự sửa một vấn đề | Chờ sinh viên | Điền THUC_HANH_CUA_TOI.md và chụp ảnh thật |
+| Buổi 2 đã lên GitHub / Pages | Chưa xác nhận | Cần copy bản cập nhật, commit, push, kiểm tra triển khai |
 
-Ảnh: `evidence/07-giao-dien-may-tinh.png`, `08-giao-dien-may-tinh-bang.png`, `09-giao-dien-dien-thoai.png`, `10-thong-tin-san-pham.png`. Số liệu đo: `evidence/kiem-tra-giao-dien.json`.
+Các kết quả trình duyệt nằm ở `evidence/buoi2/kiem-tra-sau.json`. Không suy rộng kết quả thành bảo đảm ở mọi thiết bị hoặc mọi trình duyệt.
 
-Kết quả chỉ áp dụng cho bản mã nguồn được bàn giao. Chưa kiểm tra trên Safari, Firefox, điện thoại vật lý hoặc sau khi triển khai GitHub Pages.
+## 2. Vấn đề và cách xử lý do AI hỗ trợ
 
-## 2. Sinh viên tự chạy lại
+| Vấn đề | Căn cứ | Cách xử lý |
+|---|---|---|
+| HTML ba thẻ còn viết dồn dòng; quy cách chưa đồng nhất | Đối chiếu bản trước, sách đầu đã có ul/li | Định dạng cả bốn thẻ và dùng ul/li nhất quán |
+| Ghi chú cuối vẫn 11 px trên điện thoại | Computed style ở 390 px trước sửa | Quy tắc riêng cuối tệp: 13 px khi không quá 480 px |
+| Nền summary chưa có transition riêng | Rà soát CSS trước sửa | Thêm transition màu nền/viền, giữ chế độ giảm chuyển động |
 
-- [ ] Mở đúng thư mục trong VS Code và mở `index.html` trên Chrome.
-- [ ] Kiểm tra lại 4 kích thước ở trên.
-- [ ] Xem lại FAHASA và đối chiếu đủ 5 dòng khảo sát.
-- [ ] Xác nhận các ảnh hiển thị và giá không xuống dòng bất hợp lý.
-- [ ] Dùng Tab để đến từng nút thông tin; dùng Enter hoặc Space để mở/đóng.
-- [ ] Tự phát hiện và chỉnh ít nhất một điểm, rồi chụp ảnh trước và sau.
-- [ ] Giải thích được đoạn HTML/CSS đã sửa.
-- [ ] Bổ sung thông tin cá nhân, nhật ký AI và đường dẫn repository.
-- [ ] Mở URL repository bằng cửa sổ không đăng nhập để kiểm tra Public.
+Không coi đề xuất cải thiện trình bày là lỗi chức năng hoặc kết quả đã được nghiên cứu người dùng.
 
-## 3. Nhật ký chỉnh sửa của sinh viên
+## 3. Ảnh minh chứng
 
-Chỉ điền sau khi đã thực hiện. Không ghi các thay đổi của trợ lý thành thay đổi của mình.
+Ảnh trước/sau được chụp trên các bản sao đúng thời điểm, không tái tạo lỗi giả. Bản trước đã có danh sách quy cách ở sách đầu tiên.
 
-- Ngày thực hiện:
-- Vấn đề bản thân phát hiện:
-- Ảnh hoặc tình huống trước khi sửa:
-- Tệp và đoạn mã đã thay đổi:
-- Vì sao chọn thay đổi này:
-- Vai trò của thuộc tính HTML/CSS vừa sửa:
-- Kết quả sau khi sửa và kích thước đã thử:
-- Tên commit thể hiện thay đổi:
+- `01-truoc-1366.jpg`, `02-truoc-390.jpg`.
+- `03-sau-1366.jpg`, `04-sau-390.jpg`, `05-sau-768.jpg`.
+- `07-focus.jpg`: minh họa viền focus trên nút thông tin. Vị trí focus có thể thay đổi giữa lần đọc DOM và khung hình chụp.
 
-Nếu chưa tìm được điểm cần sửa, có thể kiểm tra độ dài tên sách, cỡ chữ hoặc khoảng cách nút trên màn hình nhỏ. Đây là gợi ý tìm vấn đề; cần tự quan sát và chọn thay đổi phù hợp.
+Ảnh `06-hover.jpg` chỉ là ảnh trong quá trình kiểm tra, không dùng để kết luận chuyển tiếp đã được kiểm chứng đầy đủ.

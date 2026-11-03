@@ -1,86 +1,58 @@
-# E-commerce UI Improvement
-
-Góc Đọc là trang giao diện nhà sách mẫu cho bài tập cá nhân Chương 1 môn Phát triển ứng dụng WEB/TMĐT. Bài tập tập trung cải tiến thẻ sản phẩm, cách hiển thị giá và bố cục trên điện thoại.
+# E-commerce UI Improvement - Góc Đọc
 
 ## 1. Giới thiệu
 
-- Website mẫu: **Góc Đọc**.
-- Khu vực cải tiến: danh sách và thẻ sản phẩm.
-- Mục tiêu: giúp người xem nhận biết tên sách, giá bán, giá gốc và mức tiết kiệm; đọc thêm thông tin bằng chuột hoặc bàn phím.
-- Họ tên, MSSV, lớp: sinh viên bổ sung trước khi nộp.
+Bài tập cá nhân Buổi 2 tiếp tục mã nguồn HTML/CSS từ Buổi 1, tập trung vào danh sách và thẻ sách. Sinh viên: **Nguyễn Phan Tân Thành**, MSSV **31241022712**. Lớp: **chưa cung cấp**.
 
-## 2. Website tham khảo
+## 2. Website tham khảo và phạm vi
 
-- Tên: **FAHASA**.
-- URL: https://www.fahasa.com/
-- Khảo sát ngày **18/10/2026**, trong phiên khách, không đăng nhập.
-- Khu vực: trang chủ, danh mục sách tiếng Việt, chi tiết sản phẩm, tìm kiếm và giỏ hàng.
-- Kết quả: [SURVEY.md](SURVEY.md). Ảnh minh chứng nằm trong [evidence/](evidence/).
-- Nhận xét về trải nghiệm là đánh giá thiết kế của bài tập, chưa phải kết luận từ nghiên cứu người dùng.
+- FAHASA: https://www.fahasa.com/.
+- Kết quả khảo sát Buổi 1: [SURVEY.md](SURVEY.md).
+- Góc Đọc dùng bốn sách và hình SVG minh họa. Các số liệu giá được ghi sẵn, không phải thông tin bán hàng thực tế.
+- Buổi 2 không khảo sát lại hay kết luận thêm về FAHASA.
 
-## 3. Chức năng
+## 3. HTML5/CSS3 đã thực hành
 
-- Hiển thị 4 sản phẩm mẫu, mỗi sản phẩm có hình, tên, giá và nút thao tác.
-- Hiển thị riêng giá bán, giá gốc gạch ngang, phần trăm giảm và số tiền tiết kiệm.
-- Nút **Xem thông tin** mở/đóng nội dung bằng phần tử HTML `details` và `summary`.
-- Liên kết điều hướng đến các phần trong cùng trang.
-- Bố cục 4 cột trên màn hình lớn, 2 cột ở màn hình vừa và 1 cột ở điện thoại nhỏ.
-- Có mô tả ảnh, nhãn thao tác riêng cho từng sách, trạng thái focus và liên kết bỏ qua điều hướng.
+- `header`, `nav`, `main`, `section`, `article`, `footer`; thứ bậc `h1` → `h2` → `h3`.
+- `img` có `alt`, liên kết nội trang, `ul/li` cho quy cách của cả bốn sách.
+- CSS ngoài; element selector `body`, class selector `.product-body`, descendant selector `.book-specs li`.
+- Box Model: nội dung thẻ có `padding: 22px`, thẻ có viền và bo góc; danh sách quy cách có margin/padding riêng; `box-sizing: border-box`.
+- Flexbox tại `.price-block`: `flex-wrap`, `justify-content: flex-start`, `align-items: baseline`, `gap: 6px 12px`.
+- Grid kế thừa: trên 1050 px có 4 cột; trên 480 đến 1050 px có 2 cột; không quá 480 px có 1 cột.
+- Hover, transition màu nền/viền và `:focus-visible` cho `summary`; giữ chế độ giảm chuyển động.
 
-Trang dùng dữ liệu sách giả định phục vụ bài tập; không nhận đơn hàng. Không có giỏ hàng động, đăng nhập hay thanh toán. Những chức năng đó nằm ngoài phạm vi HTML/CSS của bài này.
+## 4. Cách chạy
 
-## 4. Công nghệ
+Mở `index.html` bằng trình duyệt. Có thể dùng Live Server nếu đã cài. Khi sửa, lưu tệp rồi tải lại trang. Không cần cài thư viện, backend hoặc cơ sở dữ liệu.
 
-- HTML5.
-- CSS3: Grid, Flexbox, biến CSS và media query.
-- SVG tự tạo trong dự án.
-- Không JavaScript, backend, cơ sở dữ liệu hay thư viện giao diện.
+## 5. Những thay đổi Buổi 2
 
-## 5. Cách chạy
+1. Định dạng lại bốn thẻ HTML, giữ tên, hình, giá và các ID cũ.
+2. Giữ danh sách quy cách đã có ở sách đầu tiên; áp dụng tương tự cho ba sách còn lại.
+3. Dùng `.product-card h3` để giới hạn định dạng tên sách trong thẻ.
+4. Tăng khoảng đệm nội dung lên 22 px; định dạng danh sách quy cách.
+5. Nội dung mở rộng dùng cỡ chữ 14 px. Ghi chú cuối dùng 12 px, tăng lên 13 px ở màn hình không quá 480 px (bản trước là 11 px).
+6. Bổ sung transition màu nền/viền và focus riêng cho nút thông tin.
 
-1. Giải nén và mở thư mục `ecommerce-ui-improvement` trong Visual Studio Code bằng **File > Open Folder**.
-2. Mở `index.html` bằng trình duyệt. Có thể nhấp đúp tệp trong File Explorer; không bắt buộc cài tiện ích.
-3. Nếu đã có Live Server trong VS Code, có thể dùng **Open with Live Server**.
-4. Dùng Chrome DevTools kiểm tra các chiều rộng 1440, 768, 390 và 320 px.
+Ảnh và dữ liệu kiểm tra: [evidence/buoi2](evidence/buoi2). Nguồn trước thay đổi được giữ trong [docs/buoi2](docs/buoi2).
 
-Chi tiết: [HUONG_DAN_VSCODE_VA_GITHUB.md](HUONG_DAN_VSCODE_VA_GITHUB.md).
+## 6. AI và kiểm tra
 
-## 6. Cải tiến đã thực hiện
+Trợ lý AI hỗ trợ sửa mã, viết tài liệu và kiểm tra bằng Chrome ở 1366, 768, 390 và 320 px. Đây là kết quả của trợ lý, chưa phải xác nhận sinh viên đã tự kiểm tra. Xem [KIEM_TRA.md](KIEM_TRA.md), [AI_USAGE.md](AI_USAGE.md) và [báo cáo](BAO_CAO_BUOI2.md).
 
-| Nhu cầu thiết kế | Cách xử lý trong trang mẫu | Lý do |
-| --- | --- | --- |
-| Tách các loại giá | Giá bán lớn và đậm; giá gốc dùng `del`; nhãn ghi rõ “Giảm” | Giảm khả năng đọc nhầm giá |
-| So sánh lợi ích giảm giá | Thêm “Tiết kiệm ... ₫” | Người xem không cần tự tính chênh lệch |
-| Đọc trên điện thoại | Một cột ở chiều rộng ≤480 px, nút cao tối thiểu 46 px | Dành đủ chỗ cho tên sách và thao tác |
-| Xem thêm nội dung | Dùng `details/summary` | Có thao tác thực tế trong phạm vi HTML/CSS |
-| Nội dung và hình ảnh độc lập | Sách giả định và SVG tự tạo | Không sao chép mã nguồn hoặc bìa sách FAHASA |
+**Còn phải thực hiện trước khi nộp:** tự chạy lại và tự chọn, sửa một vấn đề nhỏ, lưu ảnh và ghi kết quả vào [THUC_HANH_CUA_TOI.md](THUC_HANH_CUA_TOI.md). Không nhận các thay đổi AI thực hiện là thay đổi độc lập của sinh viên.
 
-Không khẳng định FAHASA thiếu toàn bộ các đặc điểm trên. Trang mẫu chọn và đơn giản hóa một số thông tin từ hành trình khảo sát, rồi bổ sung cách trình bày để thử nghiệm.
+## 7. Đường dẫn
 
-## 7. Hỗ trợ từ AI
+- [Repository](https://github.com/thanhnguyen31241022712-UEH/ecommerce-ui-improvement.-)
+- [GitHub Pages](https://thanhnguyen31241022712-ueh.github.io/ecommerce-ui-improvement.-/)
 
-ChatGPT trong Codex hỗ trợ đọc đề, quan sát website, lập bảng khảo sát, đề xuất bố cục, tạo mã nguồn, giải thích và kiểm tra giao diện. Nhật ký: [AI_USAGE.md](AI_USAGE.md).
+Các đường dẫn trên lấy từ bài Buổi 1. Bản Buổi 2 trong gói này **chưa được push**. Sau khi cập nhật, kiểm tra lại repository và Pages.
 
-Trợ lý đã kiểm tra mẫu bằng Chrome. Sinh viên cần tự chạy lại, tự phát hiện và chỉnh ít nhất một điểm, rồi ghi trung thực phần mình thực hiện trong [KIEM_TRA.md](KIEM_TRA.md). Không dùng kết quả kiểm tra của trợ lý để nhận là mình đã thực hiện.
+## 8. Tài liệu
 
-## 8. Cấu trúc
-
-```text
-ecommerce-ui-improvement/
-├── index.html
-├── css/style.css
-├── images/                 # Hình SVG tự tạo
-├── evidence/               # Ảnh khảo sát và kiểm tra giao diện
-├── README.md
-├── SURVEY.md
-├── AI_USAGE.md
-├── KIEM_TRA.md
-├── BAO_CAO.md
-└── HUONG_DAN_VSCODE_VA_GITHUB.md
-```
-
-Báo cáo: [bản PDF](Bao_cao_Bai_tap_ca_nhan_Chuong_1.pdf) và [bản Markdown có thể chỉnh trong VS Code](BAO_CAO.md). Sau khi chỉnh nội dung báo cáo Markdown, cần cập nhật bản PDF tương ứng nếu dùng để nộp.
-
-## 9. GitHub
-
-Mã nguồn đã sẵn sàng để tải lên repository **Public**. Chưa có repository hay đường dẫn GitHub Pages thực tế vì sinh viên sẽ bổ sung tài khoản sau. Làm theo hướng dẫn kèm theo, rồi thêm hai URL thực tế vào đây trước khi nộp. GitHub Pages là phần tùy chọn trong đề; repository Public là yêu cầu bắt buộc.
+- [Báo cáo Buổi 2](BAO_CAO_BUOI2.md), kèm PDF trong thư mục gốc.
+- [7 câu hỏi kiến thức và sửa mã trực tiếp](CAU_HOI_BUOI2.md).
+- [Hướng dẫn cập nhật](HUONG_DAN_CAP_NHAT_BUOI2.md).
+- [Các prompt mẫu](PROMPTS_BUOI2.md).
+- [Tài liệu Buổi 1 được giữ lại](BAO_CAO.md). Các bản README/AI_USAGE/KIEM_TRA cũ nằm ở `docs/buoi1/`.

@@ -1,91 +1,47 @@
-# AI Usage Log
+# AI Usage Log - Buổi 2
 
 ## 1. Công cụ AI
 
-ChatGPT trong Codex, phiên hỗ trợ ngày 18/10/2026. Không ghi tên mô hình cụ thể vì phiên làm việc không cung cấp thông tin xác minh tên mô hình cho bài nộp.
+ChatGPT trong Codex. Ngày chuẩn bị bản cập nhật: 02/11/2026. Không tự gán tên mô hình.
+
+Nhật ký cũ được lưu tại [docs/buoi1/AI_USAGE.md](docs/buoi1/AI_USAGE.md).
 
 ## 2. Mục đích sử dụng
 
-Đọc file hướng dẫn; chọn website tham khảo; hỗ trợ quan sát giao diện; phân biệt quan sát với đề xuất; lập bảng khảo sát; đề xuất và tạo trang HTML/CSS; giải thích mã; kiểm tra hiển thị bằng Chrome; soạn tài liệu.
+Đọc đề Buổi 2, rà soát HTML/CSS cũ, giải thích semantic HTML, CSS ngoài, selector, Box Model, Flexbox, Grid, hover/focus; chuẩn bị bản cập nhật và tài liệu; kiểm tra bằng Chrome.
 
-## 3. Prompt đã sử dụng
+## 3. Yêu cầu thực tế trong phiên
 
-Các yêu cầu thực tế do người học gửi trong phiên:
+Người học lần lượt gửi nội dung Bước 1, Bước 2, Bước 3 của đề và nhờ trợ lý hỗ trợ hoàn thành. Yêu cầu chuyển sang chuẩn bị toàn bộ:
 
-> trên là bài tập cá nhân hãy giúp tôi hoàn thành cho phù hợp theo file hướng dẫn
+> thôi bạn làm hết đi theo yêu cầu của thầy rồi đưa hướng dẫn tôi update
 
-> chọn giúp tôi website đi tôi làm trên visual studio code và các thông tin sẽ bổ sung sau
+Người học trước đó yêu cầu làm từng phần và nhận hướng dẫn sửa HTML/CSS. Ở thời điểm sao chép bản nguồn, tệp HTML trên Desktop đã có `ul.book-specs` ở sách đầu tiên. Đây là thao tác theo hướng dẫn AI, không tự coi là thay đổi độc lập do người học phát hiện.
 
-File được cung cấp: `BaiTap_CaNhan_Chuong1.pdf` gồm 11 trang. Trợ lý đọc yêu cầu rồi xây dựng bài theo phạm vi HTML/CSS. Không có phiên sử dụng công cụ AI thứ hai được ghi nhận.
+[PROMPTS_BUOI2.md](PROMPTS_BUOI2.md) chứa 9 mẫu tham khảo theo đề. Không ghi nhận cả 9 mẫu là các prompt người học đã tự nhập nguyên văn.
 
-### Prompt gợi ý để sinh viên dùng tiếp
+## 4. Kết quả trợ lý tạo
 
-Các prompt sau **là mẫu chuẩn bị cho lần sử dụng tiếp theo**, không ghi nhận là người học đã tự nhập trong phiên này. Sau khi dùng, lưu câu trả lời và kết quả đối chiếu thực tế vào nhật ký.
-
-**A. Đối chiếu khảo sát**
-
-```text
-Bạn hỗ trợ phân tích nghiệp vụ và trải nghiệm website thương mại điện tử.
-Tôi khảo sát FAHASA tại https://www.fahasa.com/.
-Dựa trên ảnh và ghi chép tôi cung cấp, lập bảng cho trang chủ, danh mục,
-chi tiết sản phẩm, tìm kiếm và giỏ hàng. Với mỗi khu vực, nêu mục đích,
-thành phần giao diện, điểm thuận tiện, một vấn đề có thể phát sinh
-và một đề xuất cải tiến. Phân biệt quan sát có bằng chứng với suy luận.
-Không khẳng định các tính năng chưa kiểm tra.
-```
-
-**B. Hiểu và chọn phương án**
-
-```text
-Tôi cải tiến thẻ sách và cách hiển thị giá bằng HTML5/CSS3 cho người mua
-trực tuyến tại Việt Nam. Hãy giải thích bố cục, các phần tử HTML,
-cách tổ chức CSS, cách hiển thị trên máy tính/điện thoại và các điểm
-cần kiểm tra. Chưa tạo mã nguồn. Giải thích vì sao chọn details/summary
-và vì sao không cần JavaScript cho thao tác xem thông tin.
-```
-
-**C. Rà soát mã sau khi chỉnh sửa**
-
-```text
-Hãy rà soát index.html và css/style.css tôi cung cấp.
-Trang cần có ít nhất 4 sách, mỗi sách có hình, tên, giá và nút thao tác;
-CSS tách riêng, chạy trực tiếp bằng trình duyệt, không backend.
-Chỉ ra lỗi có bằng chứng, giải thích Grid, Flexbox, media query và del.
-Không viết lại toàn bộ. Tôi sẽ tự chọn cách sửa và kiểm tra lại.
-```
-
-## 4. Kết quả AI đề xuất và tạo
-
-- Chọn FAHASA làm nguồn tham khảo; chọn thẻ sách làm phạm vi cải tiến.
-- Tạo mẫu Góc Đọc với 4 sách và hình SVG giả định, không sao chép bìa sách thật.
-- Tổ chức HTML theo `header`, `nav`, `main`, `section`, `article`, `footer`.
-- Dùng CSS Grid cho thẻ sản phẩm, Flexbox cho các hàng thông tin và media query để đổi số cột.
-- Giá bán nổi bật; giá gốc dùng `del`; hiển thị rõ phần trăm và số tiền tiết kiệm.
-- Dùng `details/summary` để nút thông tin hoạt động bằng HTML thuần.
+- Kế thừa mã và hình ảnh của Góc Đọc; không tạo website khác.
+- Mở rộng cấu trúc quy cách `ul/li` cho ba sách còn lại và định dạng lại HTML bốn thẻ.
+- Giới hạn selector tên sách; điều chỉnh padding, danh sách quy cách, cỡ chữ ghi chú, khoảng cách nhóm giá và trạng thái nút.
+- Giữ Grid, dữ liệu giá, điều hướng nội trang, ảnh và cơ chế `details/summary`.
+- Soạn báo cáo theo mục 1–15, câu trả lời kiến thức, hướng dẫn cập nhật, mẫu ghi nhận tự sửa.
 
 ## 5. Kiểm tra và điều chỉnh
 
-### Đã thực hiện bởi trợ lý
+Trợ lý kiểm tra bằng Chrome ở các chiều rộng 1366, 768, 390 và 320 px. Bốn ảnh sách cùng hình giới thiệu tải được; đủ bốn thẻ; không phát hiện tràn ngang tại các chiều rộng đã thử. Cả bốn summary đều đổi trạng thái khi nhấn Enter và trở về trạng thái cũ khi nhấn lần nữa. Điều hướng Tab có focus-visible và viền màu.
 
-- Quan sát trực tiếp 5 khu vực FAHASA, lưu ảnh và URL trong `SURVEY.md`.
-- Kiểm tra giỏ trống và giỏ có 1 sản phẩm; kiểm chứng tổng tiền phụ thuộc sản phẩm đã chọn. Không coi tổng 0 ₫ khi chưa chọn là lỗi tính tiền.
-- Không sử dụng kết luận về sửa lỗi chính tả, tốc độ website, thanh toán hay tăng tỷ lệ chuyển đổi vì chưa có bằng chứng.
-- Kiểm tra mẫu bằng Chrome ở chiều rộng 1440, 768, 390 và 320 px; kiểm tra ảnh và thao tác mở/đóng thông tin bằng Enter. Chi tiết ở `KIEM_TRA.md`.
+Ghi chú cuối ở 390 px được đối chiếu computed style: từ 11 px lên 13 px. Ở màn hình lớn sau cập nhật là 12 px. Padding nội dung sau cập nhật là 22 px.
 
-### Sinh viên tự thực hiện trước khi nộp
+Hover có quy tắc đổi nền/viền và transition. Quan sát tự động trạng thái hover chưa ổn định giữa các lần chụp, nên không khẳng định đã đo hoàn chỉnh hiệu ứng chuyển tiếp bằng mắt. Sinh viên kiểm tra lại bằng chuột. Chi tiết kết quả và giới hạn nằm ở [KIEM_TRA.md](KIEM_TRA.md).
 
-Chưa ghi nhận kết quả tự kiểm tra hay tự chỉnh sửa của sinh viên. Hãy tự chạy trang, xem lại website tham khảo, bổ sung nhận xét và sửa ít nhất một điểm do mình phát hiện. Ghi ngày, lý do sửa, đoạn mã và kết quả trước/sau vào `KIEM_TRA.md`, rồi cập nhật mục này.
+## 6. Phần sinh viên tự thực hiện
 
-## 6. Phần sinh viên cần hiểu và có thể giải thích
+Chưa có kết quả tự kiểm tra và thay đổi độc lập cho bản cập nhật này. Ghi vấn đề, cách sửa, ảnh trước/sau, ngày và kết quả vào [THUC_HANH_CUA_TOI.md](THUC_HANH_CUA_TOI.md). Phải nêu rõ phần AI gợi ý và phần tự quan sát/thực hiện.
 
-Đây là danh sách để tự đánh giá, chưa phải lời xác nhận sinh viên đã hiểu:
+## 7. Phần cần hiểu và giải thích
 
-- `article`: một thẻ sản phẩm độc lập; `h3`: tên sách.
-- `alt`: mô tả ý nghĩa ảnh cho trường hợp không xem được ảnh.
-- `del`: thể hiện giá gốc đã bị thay thế; không có chức năng tính giá.
-- `details/summary`: mở hoặc đóng nội dung, không lưu đơn hàng.
-- `display: grid` và `grid-template-columns`: chia danh sách thành các cột.
-- `display: flex` và `flex-wrap`: căn nhóm giá và cho phép xuống dòng.
-- `@media`: thay đổi bố cục theo chiều rộng khung nhìn.
-- `:focus-visible`: làm rõ vị trí thao tác bàn phím.
-- Các con số giá và tiết kiệm là nội dung tĩnh; khi sửa giá phải sửa các giá trị liên quan.
+`article` là đơn vị nội dung sản phẩm; `ul/li` tổ chức quy cách; `alt` mô tả ảnh; `a` điều hướng; `details/summary` mở nội dung. CSS ngoài tách trình bày; selector chọn phần tử; padding nằm trong viền, margin nằm ngoài; border-box tính padding và border vào kích thước width/height khai báo. Flexbox căn nhóm giá theo một trục chính, Grid tổ chức danh sách theo hàng và cột; media query đổi số cột. Các giá được ghi sẵn, CSS không tự tính giảm giá. Hover khác focus-visible.
+
+Danh sách trên là nội dung ôn tập, không tự xác nhận sinh viên đã hiểu toàn bộ.
