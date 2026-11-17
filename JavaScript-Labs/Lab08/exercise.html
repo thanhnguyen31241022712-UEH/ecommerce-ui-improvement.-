@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>  
+	
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/theme.css">    
+    
+    <script type="text/javascript" language="javascript" src="js/travel-data.js"></script>
+    <script type="text/javascript" language="javascript" src="js/exercise.js"></script>
+</head>
+<body>
+    
+
+   
+<div class="container">  <!-- start main content container -->
+   <div class="row">  <!-- start main content row -->
+      <div class="col-md-3">  <!-- start left navigation rail column -->   
+      
+         <div class="panel panel-info">
+           <div class="panel-heading">Continents</div>
+           <ul class="list-group"><script>document.write(outputList(continents));</script></ul>
+         </div>  <!-- end continents panel -->  
+         <div class="panel panel-info">
+           <div class="panel-heading">Popular Countries</div>
+           <ul class="list-group"><script>document.write(outputList(countries, "Canada"));</script></ul>
+         </div>  <!-- end countries panel -->       
+      </div>  <!-- end left navigation rail --> 
+      
+      <div class="col-md-9">  <!-- start main content column -->
+         <ol class="breadcrumb">
+           <li><a href="#">Home</a></li>
+           <li><a href="#">Browse</a></li>
+           <li class="active">Posts</li>
+         </ol>          
+      
+         <div class="jumbotron" id="postJumbo">
+           <h1>Posts</h1>
+           <p>Read other travellers' posts ... or create your own.</p>
+           <p><a class="btn btn-warning btn-lg">Learn more &raquo;</a></p>
+         </div>        
+      
+         <!-- start post summaries -->
+         <div class="postlist">
+         
+           <script>document.write(outputPosts(posts));</script>
+         </div>
+        
+      <script>document.write(outputPagination(9, 4));</script>
+      
+      </div>  <!-- end main content column -->
+   </div>  <!-- end main content row -->
+</div>   <!-- end main content container -->  
+    
+</body>
+</html>

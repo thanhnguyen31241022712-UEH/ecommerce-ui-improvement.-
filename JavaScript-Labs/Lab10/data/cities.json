@@ -1,0 +1,20 @@
+[
+  {"id":"","name":"Accra","iso":"GH","latitude":"5.55602","longitude":"-0.1969","population":"1963264","elevation":"91"},
+  {"id":"","name":"Amsterdam","iso":"NL","latitude":"52.37403","longitude":"4.88969","population":"741636","elevation":"13"},
+  {"id":"","name":"Athens","iso":"GR","latitude":"37.97945","longitude":"23.71622","population":"729137","elevation":"42"},
+  {"id":"","name":"Banff","iso":"CA","latitude":"51.17622","longitude":"-115.56982","population":"7502","elevation":"1388"},
+  {"id":"","name":"Battle","iso":"GB","latitude":"50.91732","longitude":"0.48417","population":"6171","elevation":"83"},
+  {"id":"","name":"Berlin","iso":"DE","latitude":"52.52437","longitude":"13.41053","population":"3426354","elevation":"43"},
+  {"id":"","name":"Calgary","iso":"CA","latitude":"51.05011","longitude":"-114.08529","population":"1019942","elevation":"1042"},
+  {"id":"","name":"Firenze","iso":"IT","latitude":"43.76667","longitude":"11.25","population":"371517","elevation":"62"},
+  {"id":"","name":"London","iso":"GB","latitude":"51.50853","longitude":"-0.12574","population":"7556900","elevation":"25"},
+  {"id":"","name":"Madrid","iso":"ES","latitude":"40.4165","longitude":"-3.70256","population":"3255944","elevation":"665"},
+  {"id":"","name":"Montreal","iso":"CA","latitude":"45.50884","longitude":"-73.58781","population":"3268513","elevation":"216"},
+  {"id":"","name":"New York City","iso":"US","latitude":"40.71427","longitude":"-74.00597","population":"8175133","elevation":"57"},
+  {"id":"","name":"Paris","iso":"FR","latitude":"48.85341","longitude":"2.3488","population":"2138551","elevation":"42"},
+  {"id":"","name":"Roma","iso":"IT","latitude":"41.89474","longitude":"12.4839","population":"2563241","elevation":"29"},
+  {"id":"","name":"San Francisco","iso":"US","latitude":"37.77493","longitude":"-122.41942","population":"805235","elevation":"28"},
+  {"id":"","name":"Toronto","iso":"CA","latitude":"43.70011","longitude":"-79.4163","population":"4612191","elevation":"175"},
+  {"id":"","name":"Vancouver","iso":"CA","latitude":"49.24966","longitude":"-123.11934","population":"1837969","elevation":"70"},
+  {"id":"","name":"Venezia","iso":"IT","latitude":"45.43861","longitude":"12.32667","population":"270816","elevation":"3"}
+]
