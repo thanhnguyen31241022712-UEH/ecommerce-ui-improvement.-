@@ -9,7 +9,7 @@ Portfolio bài thực hành môn Phát triển ứng dụng Thương mại đi�
 - Lớp học phần: 26C1INF50902702
 - GitHub cá nhân: <https://github.com/thanhnguyen31241022712-UEH>
 - GitHub Repository: <https://github.com/thanhnguyen31241022712-UEH/ecommerce-ui-improvement.->
-- GitHub Pages dự kiến: <https://thanhnguyen31241022712-ueh.github.io/ecommerce-ui-improvement.-/JavaScript-Labs/>
+- GitHub Pages: <https://thanhnguyen31241022712-ueh.github.io/ecommerce-ui-improvement.-/JavaScript-Labs/>
 
 ## Mục tiêu
 
@@ -22,10 +22,11 @@ JavaScript-Labs/
 ├── index.html             # Trang portfolio và điều hướng chính
 ├── css/style.css          # Giao diện dùng chung
 ├── js/main.js             # Tương tác của trang chủ
-├── assets/                # Ảnh cá nhân sẽ bổ sung
+├── assets/                # Ảnh đại diện cá nhân
 ├── Lab08/                 # JavaScript 1: Language Foundations
 ├── Lab09/                 # JavaScript 2: DOM and Events
 ├── Lab10/                 # JavaScript 3: jQuery
+├── report/                # Báo cáo Word tổng hợp kết quả thực hiện
 └── README.md
 ```
 
@@ -37,6 +38,8 @@ JavaScript-Labs/
 
 ## Truy cập
 
-Mở `index.html` hoặc truy cập GitHub Pages. Từ trang chủ, chọn Lab tương ứng rồi chọn từng Exercise.
+Truy cập [JavaScript Labs trên GitHub Pages](https://thanhnguyen31241022712-ueh.github.io/ecommerce-ui-improvement.-/JavaScript-Labs/). Từ trang chủ, chọn Lab tương ứng rồi chọn từng Exercise. Các liên kết Lab 08, Lab 09 và Lab 10 đã được kiểm tra trên phiên bản trực tuyến.
 
-> Trước khi nộp, cần triển khai GitHub Pages và kiểm tra lại toàn bộ liên kết trực tiếp trên website.
+## Báo cáo
+
+Báo cáo Word tổng hợp nội dung thực hiện và ảnh chụp minh chứng được lưu trong thư mục `report` với tên `31241022712_NguyenPhanTanThanh_JavaScript_Labs.docx`.
