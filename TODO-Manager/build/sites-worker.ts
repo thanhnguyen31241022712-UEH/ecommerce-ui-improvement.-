@@ -3,7 +3,14 @@ import { runWithConnectorBinding } from "../lib/connector-context";
 import type { ConnectorBinding } from "../lib/connector-contract.mjs";
 
 export default {
-  fetch(request: Request, env: Cloudflare.Env, ctx: ExecutionContext<{ CONNECTORS?: ConnectorBinding }>) {
+  async fetch(request: Request, env: Cloudflare.Env, ctx: ExecutionContext<{ CONNECTORS?: ConnectorBinding }>) {
+    const cookies = request.headers.get("cookie") || "";
+    const existing = cookies.match(/(?:^|;\s*)todo_session=([a-f0-9]{64})(?:;|$)/)?.[1];
+    const session = existing || Array.from(crypto.getRandomValues(new Uint8Array(32)), b => b.toString(16).padStart(2, "0")).join("");
+    const headers = new Headers(request.headers);
+    headers.set("oai-authenticated-user-id", `todo-${session}`);
+    headers.set("oai-authenticated-user-email", "visitor@todo.local");
+    request = new Request(request, { headers });
     let binding = ctx.props?.CONNECTORS;
     // Local preview emulates the same request-scoped capability. This branch and
     // the auxiliary service binding are absent from production builds.
@@ -23,6 +30,10 @@ export default {
         },
       };
     }
-    return runWithConnectorBinding(binding, () => handler.fetch(request, env, ctx));
+    const result = await runWithConnectorBinding(binding, () => handler.fetch(request, env, ctx));
+    if (existing) return result;
+    const response = new Response(result.body, result);
+    response.headers.append("Set-Cookie", `todo_session=${session}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=31536000`);
+    return response;
   },
 };

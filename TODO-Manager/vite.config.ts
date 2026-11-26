@@ -21,8 +21,8 @@ const localBindingConfig = {
     ? [
         {
           binding: d1,
-          database_name: "site-creator-d1",
-          database_id: SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
+          database_name: "thanh-todo-db",
+          database_id: "b9556ed0-2f13-4b0a-8255-24b57860767e",
         },
       ]
     : [],
