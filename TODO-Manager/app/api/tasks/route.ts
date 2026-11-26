@@ -1,0 +1,7 @@
+import { asc, eq } from "drizzle-orm";
+import { getDb } from "../../../db";
+import { tasks } from "../../../db/schema";
+import { getChatGPTUser } from "../../chatgpt-auth";
+const statuses = ["todo", "doing", "done"], priorities = ["low", "medium", "high"];
+export async function GET() { const user = await getChatGPTUser(); if (!user) return Response.json({ error: "Vui lòng đăng nhập." }, { status: 401 }); try { return Response.json({ tasks: await getDb().select().from(tasks).where(eq(tasks.userId, user.userId)).orderBy(asc(tasks.createdAt)) }); } catch { return Response.json({ error: "Không thể đọc database." }, { status: 500 }); } }
+export async function POST(request: Request) { const user = await getChatGPTUser(); if (!user) return Response.json({ error: "Vui lòng đăng nhập." }, { status: 401 }); try { const b = await request.json(); if (typeof b.title !== "string" || !b.title.trim()) return Response.json({ error: "Tên công việc là bắt buộc." }, { status: 400 }); const task = { id: crypto.randomUUID(), userId: user.userId, title: b.title.trim().slice(0,160), description: typeof b.description === "string" ? b.description.slice(0,1000) : "", dueDate: typeof b.dueDate === "string" && b.dueDate ? b.dueDate : null, status: statuses.includes(b.status) ? b.status : "todo", priority: priorities.includes(b.priority) ? b.priority : "medium" }; await getDb().insert(tasks).values(task); return Response.json({ task }, { status: 201 }); } catch { return Response.json({ error: "Không thể lưu database." }, { status: 500 }); } }
